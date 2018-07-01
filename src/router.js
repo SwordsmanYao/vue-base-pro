@@ -1,21 +1,29 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      redirect: '/basic',
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
-    }
-  ]
-})
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/Login'),
+    },
+    {
+      path: '/basic',
+      name: 'basic',
+      component: () => import('./layout/BasicLayout'),
+      children: [
+        { path: '', redirect: 'demopage1' },
+        { path: 'demopage1', name: 'demopage1', component: () => import('./views/Demo/DemoPage1') },
+        { path: 'demopage2', name: 'demopage2', component: () => import('./views/Demo/DemoPage2') },
+        { path: 'about', name: 'about', component: () => import('./views/About') },
+      ],
+    },
+  ],
+});
