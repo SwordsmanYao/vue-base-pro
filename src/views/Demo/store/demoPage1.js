@@ -25,7 +25,6 @@ export default {
     },
     incrementStepAsync({ commit }, payload) {
       setTimeout(() => {
-        console.log(payload);
         commit('incrementStep', payload);
       }, 1000);
     },

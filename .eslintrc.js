@@ -12,6 +12,7 @@ module.exports = {
     'no-debugger': [1],
     'semi': ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
+    'object-curly-spacing': ["error", "always"],
     'space-before-function-paren': ['error', {'anonymous': 'always', 'named': 'never', 'asyncArrow': 'always'}]
   },
   parserOptions: {
