@@ -1,4 +1,4 @@
-import { queryList } from '../service';
+import { queryList } from '@/service/demo';
 
 export default {
   namespaced: true,
