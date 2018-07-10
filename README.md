@@ -9,6 +9,7 @@
 |--|-- assets  图片等静态文件
 |--|-- components  公共组件，存放可复用组件
 |--|-- layout  布局组件
+|--|-- service  api接口
 |--|-- store  vuex 入口文件
 |--|--| utils  工具函数
 |--|--|-- request.js  统一请求封装  
@@ -19,7 +20,6 @@
 |--|--|--|-- store  模块儿内部的 store
 |--|--|--|-- DemoPage1.vue  页面路由组件
 |--|--|--|-- index.js  模块儿入口文件，导出模块儿内 store 和 路由组件
-|--|--|--|-- service.js  api接口访问层
 |--|-- App.vue  应用入口
 |--|-- main.js  项目入口文件
 |--|-- router.js  路由文件
